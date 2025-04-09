@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "rest_framework",
     "corsheaders",
+    "djongo",
     "octofit_tracker",
 ]
 
@@ -80,6 +82,8 @@ DATABASES = {
     "default": {
         "ENGINE": "djongo",
         "NAME": "octofit_db",
+        "HOST": "localhost",
+        "PORT": 27017,
     }
 }
 

@@ -14,11 +14,11 @@ class Command(BaseCommand):
         db = client[settings.DATABASES['default']['NAME']]
 
         # Drop existing collections
-        db.users.drop()
-        db.teams.drop()
-        db.activity.drop()
-        db.leaderboard.drop()
-        db.workouts.drop()
+        db.octofit_tracker_user.drop()
+        db.octofit_tracker_team.drop()
+        db.octofit_tracker_activity.drop()
+        db.octofit_tracker_leaderboard.drop()
+        db.octofit_tracker_workout.drop()
 
         # Create users
         users = [
