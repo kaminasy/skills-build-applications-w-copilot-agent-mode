@@ -6,7 +6,7 @@ from .serializers import UserSerializer, TeamSerializer, ActivitySerializer, Lea
 
 @api_view(['GET'])
 def api_root(request, format=None):
-    base_url = request.build_absolute_uri('/').rstrip('/')
+    base_url = "https://miniature-disco-r64x7jqwqwr3p79g-8000.app.github.dev" if "github.dev" in request.get_host() else "http://localhost:8000"
     return Response({
         'users': f"{base_url}/api/users/",
         'teams': f"{base_url}/api/teams/",
